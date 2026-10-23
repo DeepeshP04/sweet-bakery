@@ -2,10 +2,10 @@ import './Specialties.css';
 
 const specialties = [
   { name: 'Gulab Jamun', image: 'https://images.pexels.com/photos/11887844/pexels-photo-11887844.jpeg?auto=compress&w=600', alt: 'An Indian dessert, representative food imagery', number: '01', description: 'Soft, golden bites with all the comfort of a classic.', featured: true },
-  { name: 'Motichoor Laddoo', image: 'src/assets/motichoor-laddu.jpg', alt: 'A sweet treat, representative food imagery', number: '02', description: 'A festive favourite, round and full of cheer.' },
+  { name: 'Motichoor Laddoo', image: 'images/motichoor-laddu.jpg', alt: 'A sweet treat, representative food imagery', number: '02', description: 'A festive favourite, round and full of cheer.' },
   { name: 'Kaju Katli', image: 'https://images.unsplash.com/photo-1708782343574-b9d0dc6dd112?q=80&w=580&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D', alt: 'An Indian dessert, representative food imagery', number: '03', description: 'Delicate diamond-shaped bites for sharing or gifting.' },
   { name: 'Milk Cake', image: 'https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=700&q=80', alt: 'A rich, tender milk-based sweet, representative food imagery', number: '04', description: 'A comforting classic for the sweet-toothed.' },
-  { name: 'Rasmalai', image: 'src/assets/rasmalai.jpg', alt: 'Creamy rasmalai garnished with nuts, representative food imagery', number: '05', description: 'Soft, milky sweetness with a hint of celebration.' },
+  { name: 'Rasmalai', image: 'images/rasmalai.jpg', alt: 'Creamy rasmalai garnished with nuts, representative food imagery', number: '05', description: 'Soft, milky sweetness with a hint of celebration.' },
 ];
 
 function Specialties() {
