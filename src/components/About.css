@@ -1,0 +1,81 @@
+.about { padding-block: 95px; }
+
+.about-layout {
+  display: grid;
+  grid-template-columns: 0.8fr 1.35fr 0.55fr;
+  align-items: center;
+  gap: 55px;
+}
+
+.about-mark {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 220px;
+  height: 220px;
+  border: 1px solid #d4c3a8;
+  border-radius: 50%;
+  color: var(--wine);
+}
+
+.about-mark::before,
+.about-mark::after {
+  content: "";
+  position: absolute;
+  border: 1px solid #d4c3a8;
+  border-radius: 50%;
+}
+
+.about-mark::before { inset: 9px; }
+.about-mark::after { inset: 18px; border-style: dashed; opacity: 0.7; }
+
+.about-mark span {
+  font: italic 104px/.9 var(--serif);
+}
+
+.about-mark i {
+  position: absolute;
+  top: 35px;
+  right: 45px;
+  color: var(--gold);
+  font-size: 22px;
+  font-style: normal;
+}
+
+.about-copy > p:not(.eyebrow) {
+  max-width: 580px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.9;
+}
+
+.about-copy .text-link {
+  margin-top: 9px;
+}
+
+.about-aside {
+  margin: 38px 0 0;
+  color: var(--gold);
+  font: italic 21px/1.4 var(--serif);
+  transform: rotate(-8deg);
+}
+
+@media (max-width: 1050px) {
+  .about-layout { gap: 30px; }
+  .about-mark { width: 175px; height: 175px; }
+  .about-mark span { font-size: 80px; }
+  .about-mark i { top: 28px; right: 35px; }
+}
+
+@media (max-width: 760px) {
+  .about { padding-block: 70px; }
+  .about-layout { grid-template-columns: 1fr; gap: 27px; }
+  .about-mark {
+    width: 125px;
+    height: 125px;
+    justify-self: center;
+  }
+  .about-mark span { font-size: 59px; }
+  .about-mark i { top: 17px; right: 24px; font-size: 17px; }
+  .about-aside { display: none; }
+}

@@ -1,0 +1,123 @@
+.enquire {
+  position: relative;
+  overflow: hidden;
+  background: var(--wine-dark);
+  color: white;
+}
+
+.enquire-layout {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 90px;
+  align-items: center;
+}
+
+.enquire h2 {
+  color: white;
+  font-family: var(--serif);
+  font-size: clamp(39px, 4.3vw, 57px);
+  font-weight: 500;
+  line-height: 1.04;
+  letter-spacing: -0.045em;
+}
+
+.enquire h2 em { color: #edcc9c; }
+
+.enquire-copy > p:not(.eyebrow) {
+  max-width: 390px;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 12px;
+  line-height: 1.85;
+}
+
+.enquire-decoration {
+  margin-top: 38px;
+  color: rgba(255, 255, 255, 0.22);
+  font-size: 46px;
+}
+
+.enquiry-form {
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.field {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 17px;
+}
+
+.field label {
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.field label span { color: #edcc9c; }
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  min-height: 45px;
+  padding: 11px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.23);
+  border-radius: 1px;
+  outline: none;
+  color: white;
+  background: rgba(255, 255, 255, 0.06);
+  font-size: 11px;
+}
+
+.field select { color-scheme: dark; }
+.option { color: var(--ink); }
+.field option { color: var(--ink); background: var(--paper); }
+.field textarea {
+  min-height: 84px;
+  resize: vertical;
+}
+
+.field input::placeholder,
+.field textarea::placeholder {
+  color: rgba(255, 255, 255, 0.48);
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  border-color: #edcc9c;
+}
+
+.form-submit { border: 0; }
+
+.form-status {
+  min-height: 18px;
+  margin: 12px 0 0;
+  color: #f3d79c;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.form-disclaimer {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 9px;
+}
+
+@media (max-width: 1050px) {
+  .enquire-layout { gap: 45px; }
+}
+
+@media (max-width: 760px) {
+  .enquire-layout { grid-template-columns: 1fr; gap: 26px; }
+  .enquire-decoration { display: none; }
+  .enquiry-form { padding: 20px 16px; }
+  .form-row { grid-template-columns: 1fr; gap: 0; }
+}

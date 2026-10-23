@@ -1,0 +1,113 @@
+.bakery { overflow: hidden; }
+
+.bakery-layout {
+  display: grid;
+  grid-template-columns: 0.73fr 1.27fr;
+  gap: 70px;
+  align-items: center;
+}
+
+.bakery-intro > p:not(.eyebrow) {
+  max-width: 365px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.85;
+}
+
+.bakery-intro .menu-note {
+  margin-top: 17px;
+  color: var(--wine);
+  font-size: 10px !important;
+}
+
+.bakery-showcase {
+  display: grid;
+  grid-template-columns: 1.03fr 0.97fr;
+  gap: 15px;
+  align-items: stretch;
+}
+
+.bakery-feature {
+  position: relative;
+  min-height: 500px;
+  overflow: hidden;
+  margin: 0;
+  background: var(--cream-deep);
+}
+
+.bakery-feature::after {
+  content: "";
+  position: absolute;
+  inset: 35% 0 0;
+  background: linear-gradient(transparent, rgba(30, 18, 13, 0.72));
+}
+
+.bakery-feature-label {
+  position: absolute;
+  z-index: 1;
+  left: 22px;
+  bottom: 22px;
+  color: white;
+}
+
+.bakery-feature-label span {
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.bakery-feature-label h3 {
+  margin: 6px 0 0;
+  font: 500 27px var(--serif);
+}
+
+.bakery-mini-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.bakery-mini {
+  min-width: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.bakery-mini img {
+  height: 132px;
+  background: var(--cream-deep);
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.bakery-mini:hover img {
+  transform: scale(1.035);
+}
+
+.bakery-mini h3 {
+  margin: 10px 0 4px;
+  font-size: 15px;
+}
+
+.bakery-mini > span {
+  color: var(--muted);
+  font-size: 8px;
+  letter-spacing: 0.08em;
+}
+
+@media (max-width: 1050px) {
+  .bakery-layout { gap: 38px; }
+  .bakery-showcase { grid-template-columns: 0.9fr 1.1fr; }
+  .bakery-feature { min-height: 470px; }
+  .bakery-mini img { height: 115px; }
+}
+
+@media (max-width: 760px) {
+  .bakery-layout { grid-template-columns: 1fr; gap: 32px; }
+  .bakery-intro > p:not(.eyebrow) { max-width: 480px; }
+  .bakery-showcase { grid-template-columns: 1fr; }
+  .bakery-feature { min-height: min(115vw, 470px); }
+  .bakery-mini-grid { gap: 15px 12px; }
+  .bakery-mini img { height: clamp(100px, 31vw, 160px); }
+  .bakery-mini h3 { font-size: 14px; }
+}
